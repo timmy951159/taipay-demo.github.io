@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Taipay Demo</title>
   <meta name="viewport" content="width=device-width, user-scalable=no">
-  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />	
+  <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />	
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   <link rel="stylesheet" href="css/app.css">
   
@@ -94,8 +94,8 @@
 	      <div is="block" class="ui-block-a" style="height:100%">
 	      	<a is="button" class="ui-btn ml0 bg-dark-gray text-white f18" href="#page1" data-transition="slide">取消</a>
 	      </div>
-	      <div id="conform" is="block" class="ui-block-b" style="height:100%">
-	      	<a is="button" class="ui-btn mr0 bg-orange f18" href="javascript:void(0);" onclick="signUpConform()">送出</a>
+	      <div is="block" class="ui-block-b" style="height:100%">
+	      	<a id="conform" is="button" class="ui-btn mr0 bg-orange f18" href="javascript:void(0);" onclick="signUpConform()">送出</a>
 	      </div>
 	    </div>
 
@@ -194,32 +194,32 @@
 
 
 
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery.mobile-1.4.5.js"></script>
 <script>
 	window.onload = function() {
 
 	}
 
-	$('#conform').click(function(){
+	// $('#conform').click(function(){
 
-		var usercount = document.getElementById("userCount").value;
-		var userbirth= document.getElementById("userBirth").value;
-		var userid = document.getElementById("userId").value;
-		var userphone = document.getElementById("userPhone").value;
-		var useremail = document.getElementById("userEmail").value;
-
-
-		document.getElementById("info-user-count").innerHTML = usercount;
-		document.getElementById("info-user-birth").innerHTML = userbirth;
-		document.getElementById("info-user-id").innerHTML = userid;
-		document.getElementById("info-user-phone").innerHTML = userphone;
-		document.getElementById("info-user-email").innerHTML = useremail;
+	// 	var usercount = document.getElementById("userCount").value;
+	// 	var userbirth= document.getElementById("userBirth").value;
+	// 	var userid = document.getElementById("userId").value;
+	// 	var userphone = document.getElementById("userPhone").value;
+	// 	var useremail = document.getElementById("userEmail").value;
 
 
-		setTimeout("javascript:location.href='file:///C:/Users/Taipay36/Desktop/index.html#page4'", 4000); 
+	// 	document.getElementById("info-user-count").innerHTML = usercount;
+	// 	document.getElementById("info-user-birth").innerHTML = userbirth;
+	// 	document.getElementById("info-user-id").innerHTML = userid;
+	// 	document.getElementById("info-user-phone").innerHTML = userphone;
+	// 	document.getElementById("info-user-email").innerHTML = useremail;
 
-	});
+
+	// 	setTimeout("javascript:location.href='file:///C:/Users/Taipay36/Desktop/taipay-mobile-demo/index.html#page4'", 4000); 
+
+	// });
 
 	function loginComform(){
 		
@@ -229,7 +229,7 @@
 			alert("請輸入帳號密碼");
 		}
 		else {
-			javascript:location.href = 'file:///C:/Users/Taipay36/Desktop/index.html#page5';
+			javascript:location.href = 'file:///C:/Users/Taipay36/Desktop/taipay-mobile-demo/index.html#page5';
 		}
 
 	}
@@ -246,7 +246,14 @@
 			alert("請輸入完整資料");
 		}
 		else {
-			javascript:location.href = 'file:///C:/Users/Taipay36/Desktop/index.html#page3';
+
+		document.getElementById("info-user-count").innerHTML = usercount;
+		document.getElementById("info-user-birth").innerHTML = userbirth;
+		document.getElementById("info-user-id").innerHTML = userid;
+		document.getElementById("info-user-phone").innerHTML = userphone;
+		document.getElementById("info-user-email").innerHTML = useremail;
+			javascript:location.href = 'file:///C:/Users/Taipay36/Desktop/taipay-mobile-demo/index.html#page3';
+			setTimeout("javascript:location.href='file:///C:/Users/Taipay36/Desktop/taipay-mobile-demo/index.html#page4'", 4000); 
 		}
 
 	}
