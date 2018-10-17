@@ -45,7 +45,7 @@
     	color: #555;
 	}
   	.logo {
-  		width: 100px;
+  		width: 80px;
 	    position: relative;
 	    top: 5px;
   	}
@@ -82,7 +82,7 @@
 	}
 
 	.user-block img {
-		width: 200px;
+		width: 150px;
 	}
 
 	::-webkit-input-placeholder {
