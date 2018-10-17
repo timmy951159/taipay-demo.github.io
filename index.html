@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Taipay Demo</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />	
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/app.css">
+  
+</head>
+
+<body>
+
+<div id="page1" data-role="page">
+  <div role="main">
+	<div is="header" data-role="header">
+    	<img class="logo" src="image/logo.png" alt="">
+  	</div>
+	<div class="ui-content">
+		
+		<div class="user-block">
+			<img src="image/user.png" is="image">
+		</div>
+
+	  	<form>
+			<div class="input-wrap">
+			 <label for="text-1" class="ui-hidden-accessible">count input:</label>
+		     <input id="loginCount" class="count" type="text" data-clear-btn="true" name="text-1" value="" placeholder="帳號" required />
+			 <i class="fas fa-user"></i>
+			</div>
+
+			<div class="input-wrap">
+		     <label for="text-2" class="ui-hidden-accessible">password input:</label>
+		     <input id="loginPassword" type="password" data-clear-btn="true" name="text-2"  value="" placeholder="密碼">
+		     <i class="fas fa-lock"></i>
+			</div>
+
+			 <label class="bg-gray">
+	         	<input type="checkbox" name="checkbox-0 ">記住我
+	    	 </label>
+
+		</form>
+	  	<a is="button" class="bg-orange mt25 f18 ui-btn" href="javascript:void(0);" onclick="loginComform()" data-transition="slide">登入</a>
+	  	<a is="button" class="bg-dark-gray f18 text-white ui-btn" href="#page2" data-transition="slide">沒有帳號？立即註冊</a>
+  	</div>
+  </div>
+</div>
+
+
+
+<div id="page2" data-role="page">
+  <div role="main">
+  	<div is="header" data-role="header">
+    	<img class="logo" src="image/logo.png" alt="">
+  	</div>
+  	<div class="big-label bg-dark-gray">
+  		<p class="text-white">註冊</p>
+  	</div>
+  	<div class="ui-content">
+		<div class="input-wrap mt25">
+			<label for="text-1" class="ui-hidden-accessible">count input:</label>
+			<input id="userCount" class="count" type="text" data-clear-btn="true" name="text-1" value="" placeholder="帳號">
+			<i class="fas fa-user"></i>
+		</div>
+		<div class="input-wrap">
+			<label for="text-1" class="ui-hidden-accessible">count input:</label>
+			<input id="userPassword" class="count" type="text" data-clear-btn="true" name="text-1" value="" placeholder="密碼">
+			<i class="fas fa-lock"></i>
+		</div>
+		<div class="input-wrap">
+			<label for="text-1" class="ui-hidden-accessible">count input:</label>
+			<input id="userBirth" class="count" type="text" data-clear-btn="true" name="text-1" value="" placeholder="生日 YYYY-MM-DDD">
+			<i class="fas fa-birthday-cake"></i>
+		</div>
+		<div class="input-wrap">
+			<label for="text-1" class="ui-hidden-accessible">count input:</label>
+			<input id="userId" class="count" type="text" data-clear-btn="true" name="text-1" value="" placeholder="身分證字號">
+			<i class="fas fa-id-card"></i>
+		</div>
+		<div class="input-wrap">
+			<label for="text-1" class="ui-hidden-accessible">count input:</label>
+			<input id="userPhone" class="count" type="text" data-clear-btn="true" name="text-1" value="" placeholder="手機">
+			<i class="fas fa-mobile-alt"></i>
+		</div>
+		<div class="input-wrap">
+			<label for="text-1" class="ui-hidden-accessible">count input:</label>
+			<input id="userEmail" class="count" type="text" data-clear-btn="true" name="text-1" value="" placeholder="E-mail">
+			<i class="fas fa-envelope"></i>
+		</div>
+		
+		<div is="grid" class="ui-grid-a" style="height:95px">
+	      <div is="block" class="ui-block-a" style="height:100%">
+	      	<a is="button" class="ui-btn ml0 bg-dark-gray text-white f18" href="#page1" data-transition="slide">取消</a>
+	      </div>
+	      <div id="conform" is="block" class="ui-block-b" style="height:100%">
+	      	<a is="button" class="ui-btn mr0 bg-orange f18" href="javascript:void(0);" onclick="signUpConform()">送出</a>
+	      </div>
+	    </div>
+
+	</div>
+
+	
+  </div>
+
+</div>
+
+
+
+<div id="page3" data-role="page" style="background-color: #f9bc24!important;">
+  <div role="main" class="ui-content" style="background-color: #f9bc24!important	;">
+  	
+	<div class="sk-cube-grid">
+	  <div class="sk-cube sk-cube1"></div>
+	  <div class="sk-cube sk-cube2"></div>
+	  <div class="sk-cube sk-cube3"></div>
+	  <div class="sk-cube sk-cube4"></div>
+	  <div class="sk-cube sk-cube5"></div>
+	  <div class="sk-cube sk-cube6"></div>
+	  <div class="sk-cube sk-cube7"></div>
+	  <div class="sk-cube sk-cube8"></div>
+	  <div class="sk-cube sk-cube9"></div>
+	</div>
+	<span class="loading">loading...</span>
+  </div>
+</div>
+
+
+<div id="page4" data-role="page">
+  <div role="main">
+  	<div is="header" data-role="header">
+    	<img class="logo" src="image/logo.png" alt="">
+  	</div>
+  	<div class="ui-content">
+  		<div class="user-block">
+			<img src="image/user-check.png" is="image">
+		</div>
+		<h3>註冊成功！</h3>
+		<a is="button" class="bg-orange mt25 f18 ui-btn" href="#page1" data-transition="slide">請重新登錄</a>
+  	</div>
+  </div>
+</div>
+
+
+<div id="page5" data-role="page">
+  <div role="main">
+  	<div is="header" data-role="header">
+    	<img class="logo" src="image/logo.png" alt="">
+  	</div>
+
+  	<div class="user-block">
+		<img src="image/user-check.png" is="image">
+	</div>
+	<div class="big-label bg-orange text-black">
+		<p class="text-black">
+			會員資訊
+		</p>
+	</div>
+		<div>
+			<div class="column text-black">
+				<i class="fas fa-user"></i>
+				<span class="small-icon">帳號：</span>
+				<span id="info-user-count"></span>
+			</div>
+			<div class="column text-black">
+				<i class="fas fa-birthday-cake"></i>
+				<span>生日：</span>
+				<span id="info-user-birth"></span>
+			</div>
+			<div class="column text-black">
+				<i class="fas fa-id-card"></i>
+				<span>身分證字號：</span>
+				<span id="info-user-id"></span>
+			</div>
+			<div class="column text-black">
+				<i class="fas fa-mobile-alt"></i>
+				<span>手機號碼：</span>
+				<span id="info-user-phone"></span>
+			</div>
+			<div class="column text-black">
+				<i class="fas fa-envelope"></i>
+				<span>E-mail：</span>
+				<span id="info-user-email"></span>
+			</div>
+		</div>
+		<div class="ui-content">
+			<a is="button" class="bg-orange mt25 f18 ui-btn" href="#page1" data-transition="slide">登出</a>
+		</div>
+  </div>
+</div>
+
+
+
+
+
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script>
+	window.onload = function() {
+
+	}
+
+	$('#conform').click(function(){
+
+		var usercount = document.getElementById("userCount").value;
+		var userbirth= document.getElementById("userBirth").value;
+		var userid = document.getElementById("userId").value;
+		var userphone = document.getElementById("userPhone").value;
+		var useremail = document.getElementById("userEmail").value;
+
+
+		document.getElementById("info-user-count").innerHTML = usercount;
+		document.getElementById("info-user-birth").innerHTML = userbirth;
+		document.getElementById("info-user-id").innerHTML = userid;
+		document.getElementById("info-user-phone").innerHTML = userphone;
+		document.getElementById("info-user-email").innerHTML = useremail;
+
+
+		setTimeout("javascript:location.href='file:///C:/Users/Taipay36/Desktop/index.html#page4'", 4000); 
+
+	});
+
+	function loginComform(){
+		
+		var count = document.getElementById("loginCount").value;
+		var password = document.getElementById('loginPassword').value;
+		if(count === "" || password === "") {
+			alert("請輸入帳號密碼");
+		}
+		else {
+			javascript:location.href = 'file:///C:/Users/Taipay36/Desktop/index.html#page5';
+		}
+
+	}
+
+	function signUpConform() {
+		var usercount = document.getElementById("userCount").value;
+		var userpassword = document.getElementById("userPassword").value;
+		var userbirth= document.getElementById("userBirth").value;
+		var userid = document.getElementById("userId").value;
+		var userphone = document.getElementById("userPhone").value;
+		var useremail = document.getElementById("userEmail").value;
+
+		if(usercount === "" || userpassword === "" ||  userbirth === "" ||  userid === "" ||  userphone === "" || useremail=== "") {
+			alert("請輸入完整資料");
+		}
+		else {
+			javascript:location.href = 'file:///C:/Users/Taipay36/Desktop/index.html#page3';
+		}
+
+	}
+
+
+</script>
+</body>
+</html>
