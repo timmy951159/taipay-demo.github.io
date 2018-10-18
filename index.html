@@ -422,9 +422,9 @@
 	
 	function loginComform(){
 		
-
 		var count = document.getElementById("loginCount").value;
 		var password = document.getElementById('loginPassword').value;
+
 		if(count === "" || password === "") {
 			alert("請輸入帳號密碼");
 		}
@@ -448,12 +448,38 @@
 			alert("請輸入完整資料");
 		}
 		else {
-		console.log(currentUrl);
-		document.getElementById("info-user-count").innerHTML = usercount;
-		document.getElementById("info-user-birth").innerHTML = userbirth;
-		document.getElementById("info-user-id").innerHTML = userid;
-		document.getElementById("info-user-phone").innerHTML = userphone;
-		document.getElementById("info-user-email").innerHTML = useremail;
+			console.log(currentUrl);
+
+			var usercount = usercount.replace(function(){
+				var txtToStar = usercount.substring(1,5);
+				return txtToStar;
+			}(),'****');
+
+			var userid = userid.replace(function(){
+				var txtToStar = userid.substring(0,7);
+				return txtToStar;
+			}(),'*******');
+
+			var userphone = userphone.replace(function(){
+				var txtToStar = userphone.substring(1,5);
+				return txtToStar;
+			}(),'****');
+
+			var useremail = useremail.replace(function(){
+				var txtToStar = useremail.substring(0,5);
+				return txtToStar;
+			}(),'*****');
+
+
+
+
+
+			document.getElementById("info-user-count").innerHTML = usercount;
+			document.getElementById("info-user-birth").innerHTML = userbirth;
+			document.getElementById("info-user-id").innerHTML = userid;
+			document.getElementById("info-user-phone").innerHTML = userphone;
+			document.getElementById("info-user-email").innerHTML = useremail;
+
 			javascript:location.href = currentUrl + '#page3';
 			setTimeout( 'javascript:location.href = currentUrl + "#page4"', 5000); 
 		}
@@ -462,10 +488,25 @@
 
 
 	function allconform() {
-		javascript:location.href = currentUrl + '#page3';
-			setTimeout( 'javascript:location.href = currentUrl + "#page9"', 5000); 
-	}
 
+		var creditNum1 = document.getElementById('gk-1018YLCC').value;
+		var creditNum2 = document.getElementById('gk-1018We0J').value;
+		var creditNum3 = document.getElementById('gk-1018Jyak').value;
+		var creditNum4 = document.getElementById('gk-1018I7Xw').value;
+		var creditNumAll = creditNum1 + '-' + creditNum2 + '-' + creditNum3 + '-' + creditNum4 ;
+
+		creditNumAll = creditNumAll.replace(function(){
+			var creditNumAlltoStar = creditNumAll.substring(0,4);
+			return creditNumAlltoStar;
+		}(),'****');
+
+		document.getElementById("info-user-credit").innerHTML = creditNumAll;
+
+		console.log(creditNumAll);
+
+		javascript:location.href = currentUrl + '#page3';
+		setTimeout( 'javascript:location.href = currentUrl + "#page9"', 5000); 
+	}
 
 
 </script>
