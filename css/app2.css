@@ -6,14 +6,41 @@
 	.ui-page-theme-a .ui-btn.ui-btn-active, html .ui-bar-a .ui-btn.ui-btn-active, html .ui-body-a .ui-btn.ui-btn-active, html body .ui-group-theme-a .ui-btn.ui-btn-active, html head+body .ui-btn.ui-btn-a.ui-btn-active, .ui-page-theme-a .ui-checkbox-on:after, html .ui-bar-a .ui-checkbox-on:after, html .ui-body-a .ui-checkbox-on:after, html body .ui-group-theme-a .ui-checkbox-on:after, .ui-btn.ui-checkbox-on.ui-btn-a:after, .ui-page-theme-a .ui-flipswitch-active, html .ui-bar-a .ui-flipswitch-active, html .ui-body-a .ui-flipswitch-active, html body .ui-group-theme-a .ui-flipswitch-active, html body .ui-flipswitch.ui-bar-a.ui-flipswitch-active, .ui-page-theme-a .ui-slider-track .ui-btn-active, html .ui-bar-a .ui-slider-track .ui-btn-active, html .ui-body-a .ui-slider-track .ui-btn-active, html body .ui-group-theme-a .ui-slider-track .ui-btn-active, html body div.ui-slider-track.ui-body-a .ui-btn-active {
 		background-color: #f9bc24;
 	}
+	.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+		text-shadow: none!important;
+	}
+	ul {
+		padding: 0;
+	}
+	li {
+		list-style: none;
+	}
+	.tc {
+		text-align: center!important;
+	}
+	.f18 {
+		font-size: 18px;
+	}
 	.mt25 {
 		margin-top: 25px;
+	}
+	.mb0 {
+		margin-bottom: 0;
+	}
+	.mb50 {
+		margin-bottom: 50px;
+	}
+	.mb70 {
+		margin-bottom: 70px;
 	}
 	.bg-orange {
 		background-color: #f9bc24!important;
 	}
 	.bg-gray {
 		background-color: #ddd!important;
+	}
+	.bg-green {
+		background-color: #5EA778!important;
 	}
 	.bg-dark-gray {
 		background-color: #828282!important;
@@ -22,7 +49,7 @@
 		color: #fff!important;
 	}
 	.text-black {
-		color: #555;
+		color: #555!important;
 	}
 	.ui-page-theme-a .ui-bar-inherit {
 		background-color: #fff;
@@ -143,14 +170,100 @@
 	}
 
 	.column {
-		background-color: #fff;
-		border-bottom: 1px solid #DDD;
-		padding: 10px;
-		font-size: 18px;
+	    background-color: #fff;
+	    border-bottom: 1px solid #DDD;
+	    padding: 20px 10px;
+	    font-size: 18px;
 	}
 
+	.buy-btn {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+	}
 
+	.buy-btn a {
+		border-radius: 0!important;
+		margin: 0;
+	}
 
+	.product-list {
+		padding: 0;
+    	margin: 0;
+	}
+
+	.product-list img {
+		width: 80px;
+	}
+
+	.product-list li {
+		position: relative;
+	    float: left;
+	    width: calc(50% - 4px);
+	    list-style: none;
+	    text-align: center;
+	    background-color: #fff;
+	    margin: 2px;
+	}
+	
+	.product-list li a {
+		display: block;
+		padding: 15% 4%;
+		text-decoration: none;
+	}
+	
+	.product-price {
+		color: #555;
+		display: block;
+	}
+
+	.buyit-icon {
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+	}
+
+	.buyit-icon i {
+		font-size: 20px;
+	}
+
+	#page8 .ui-field-contain {
+		padding: 0;
+		margin :0 5px;
+	}
+
+	#page8 .credit-num-input .ui-field-contain::after {
+		content: '';
+	    width: 3px;
+	    height: 2px;
+	    background-color: #555;
+	    position: absolute;
+	    right: -6px;
+	    top: 25px;
+	}
+
+	#page8 .ui-block-d .ui-field-contain::after {
+		content: none;
+	}
+
+	.card-kind {
+		padding-left: 5px;
+		overflow: hidden;
+	}
+	.card-kind li {
+		float: left;
+		margin-right: 15px;
+	}
+
+	.effect-date form {
+		width: 50%;
+		float: left;
+	}
+	
+	.effect-date .ui-field-contain {
+		position: relative;
+    	top: -25px;
+	}
 
 
 /**Loading Animation**/

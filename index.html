@@ -40,8 +40,8 @@
 			 <label class="bg-gray">
 	         	<input type="checkbox" name="checkbox-0 ">記住我
 	    	 </label>
-
 		</form>
+
 	  	<a is="button" class="bg-orange mt25 f18 ui-btn" href="javascript:void(0);" onclick="loginComform()" data-transition="slide">登入</a>
 	  	<a is="button" class="bg-dark-gray f18 text-white ui-btn" href="#page2" data-transition="slide">沒有帳號？立即註冊</a>
   	</div>
@@ -89,6 +89,7 @@
 			<input id="userEmail" class="count" type="text" data-clear-btn="true" name="text-1" value="" placeholder="E-mail">
 			<i class="fas fa-envelope"></i>
 		</div>
+		
 		
 		<div is="grid" class="ui-grid-a" style="height:95px">
 	      <div is="block" class="ui-block-a" style="height:100%">
@@ -183,12 +184,228 @@
 				<span>E-mail：</span>
 				<span id="info-user-email"></span>
 			</div>
+			<div class="column text-black">
+				<i class="fas fa-credit-card"></i>
+				<span>信用卡卡號：</span>
+				<span id="info-user-credit"></span>
+			</div>
 		</div>
 		<div class="ui-content">
-			<a is="button" class="bg-orange mt25 f18 ui-btn" href="#page1" data-transition="slide">登出</a>
+			<a is="button" class="bg-orange mt25 mb70 f18 ui-btn" href="#page1" data-transition="slide">登出</a>
+		</div>
+		<div class="buy-btn">
+			<a is="button" class="bg-green text-white mt25 f18 ui-btn" href="#page6" data-transition="slide" style="box-shadow: 0px -2px 10px rgba(0,0,0,.2);"><i class="fas fa-shopping-cart"></i> 前往購物車</a>
 		</div>
   </div>
 </div>
+
+
+
+<div id="page6" data-role="page">
+  <div role="main">
+  	<div is="header" data-role="header">
+    	<img class="logo" src="image/logo.png" alt="">
+  	</div>
+  	<div class="big-label bg-dark-gray">
+  		<p class="text-white">商店</p>
+  	</div>
+  	<ul class="product-list">
+  		<li>
+  			<a href="#page7" data-transition="slide">
+	  			<img src="image/product1.png" alt="">
+	  			<span class="product-price">$99.00</span>
+	  			<span class="buyit-icon"><i class="fas fa-shopping-cart text-black"></i></span>
+  			</a>
+  		</li>
+  		<li>
+  			<a href="#page7" data-transition="slide">
+	  			<img src="image/product2.png" alt="">
+	  			<span class="product-price">$99.00</span>
+	  			<span class="buyit-icon"><i class="fas fa-shopping-cart text-black"></i></span>
+  			</a>
+  		</li>
+  		<li>
+  			<a href="#page7" data-transition="slide">
+	  			<img src="image/product3.png" alt="">
+	  			<span class="product-price">$99.00</span>
+	  			<span class="buyit-icon"><i class="fas fa-shopping-cart text-black"></i></span>
+  			</a>
+  		</li>
+  		<li>
+  			<a href="#page7" data-transition="slide">
+	  			<img src="image/product4.png" alt="">
+	  			<span class="product-price">$99.00</span>
+	  			<span class="buyit-icon"><i class="fas fa-shopping-cart text-black"></i></span>
+  			</a>
+  		</li>
+  		<li>
+  			<a href="#page7" data-transition="slide">
+	  			<img src="image/product5.png" alt="">
+	  			<span class="product-price">$99.00</span>
+	  			<span class="buyit-icon"><i class="fas fa-shopping-cart text-black"></i></span>
+  			</a>
+  		</li>
+  		<li>
+  			<a href="#page7" data-transition="slide">
+	  			<img src="image/product6.png" alt="">
+	  			<span class="product-price">$99.00</span>
+	  			<span class="buyit-icon"><i class="fas fa-shopping-cart text-black"></i></span>
+  			</a>
+  		</li>
+  	</ul>
+  </div>
+</div>
+
+
+<div id="page7" data-role="page">
+  <div role="main">
+  	<div is="header" data-role="header">
+    	<img class="logo" src="image/logo.png" alt="">
+  	</div>
+  	<div class="ui-content">
+  		<div class="user-block">
+			<img src="image/product2.png" is="image">
+			<h2 class="product-price">$99.00</h2>
+		</div>
+		<div is="grid" class="ui-grid-a" style="height:95px">
+	      <div is="block" class="ui-block-a" style="height:100%">
+	      	<a is="button" class="ui-btn ml0 bg-dark-gray text-white f18" href="#" data-rel="back" data-transition="slide">取消</a>
+	      </div>
+	      <div is="block" class="ui-block-b" style="height:100%">
+	      	<a id="conform" is="button" class="ui-btn mr0 bg-orange f18" href="#page8">確定下單</a>
+	      </div>
+	    </div>
+		
+  	</div>
+  </div>
+</div>
+
+
+
+
+
+<div id="page8" data-role="page">
+  <div role="main">
+  	<div is="header" data-role="header">
+    	<img class="logo" src="image/logo.png" alt="">
+  	</div>
+	<div class="big-label bg-dark-gray">
+  		<p class="text-white"><i class="fas fa-credit-card"></i> &nbsp;請輸入信用卡資料</p>
+  	</div>
+
+
+  	<div class="ui-content">
+  		
+  		<p class="f18">信用卡卡號：</p>
+		<div is="grid" class="ui-grid-c	credit-num-input" style="height:60px">
+	      <div is="block" class="ui-block-a" style="height:100%">
+	        <div is="fieldcontain" class="ui-field-contain">
+	          <label for="gk-1018YLCC"></label>
+	          <input class="tc" is="text-input" type="password" name id="gk-1018YLCC" maxlength="4">
+	        </div>
+	      </div>
+	      <div is="block" class="ui-block-b" style="height:100%">
+	        <div is="fieldcontain" class="ui-field-contain">
+	          <label for="gk-1018We0J"></label>
+	          <input class="tc" is="text-input" type="password" name id="gk-1018We0J" maxlength="4">
+	        </div>
+	      </div>
+	      <div is="block" class="ui-block-c" style="height:100%">
+	        <div is="fieldcontain" class="ui-field-contain">
+	          <label for="gk-1018Jyak"></label>
+	          <input class="tc" is="text-input" type="password" name id="gk-1018Jyak" maxlength="4">
+	        </div>
+	      </div>
+	      <div is="block" class="ui-block-d" style="height:100%">
+	        <div is="fieldcontain" class="ui-field-contain">
+	          <label for="gk-1018I7Xw"></label>
+	          <input class="tc" is="text-input" type="password" name id="gk-1018I7Xw" maxlength="4">
+	        </div>
+	      </div>
+	    </div>
+	
+		<div class="card-kind mb50">
+			<ul>
+				<li style="line-height: 28px;">
+					<img src="image/VISA.png" alt="">
+				</li>
+				<li>
+					<img src="image/Mastercard.png" alt="">
+				</li>
+				<li>
+					<img src="image/JCB.png" alt="">
+				</li>
+			</ul>
+		</div>
+
+		<p class="f18">有效年月：</p>
+		<div class="effect-date mb50">
+			<form>
+				<div class="ui-field-contain">
+				    <select name="select-native-1" id="select-native-1">
+				        <option value="">請輸入年</option>
+				        <option value="2018">2018</option>
+				        <option value="2019">2019</option>
+				        <option value="2020">2020</option>
+						<option value="2021">2021</option>
+				    </select>
+				</div>
+			</form>
+			<form>
+				<div class="ui-field-contain">
+				    <select name="select-native-2" id="select-native-2">
+				        <option value="">請輸入月</option>
+				        <option value="1">1</option>
+				        <option value="2">2</option>
+				        <option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+				    </select>
+				</div>
+			</form>
+			<div style="clear: both;"></div>
+		</div>
+		
+		<div is="grid" class="ui-grid-a" style="height:95px">
+	      <div is="block" class="ui-block-a" style="height:100%">
+	      	<a is="button" class="ui-btn ml0 bg-dark-gray text-white f18" href="#" data-rel="back" data-transition="slide">取消</a>
+	      </div>
+	      <div is="block" class="ui-block-b" style="height:100%">
+	      	<a id="conform" is="button" class="ui-btn mr0 bg-orange f18" href="javascript:void(0);" onclick="allconform()">確認</a>
+	      </div>
+	    </div>
+
+  	</div>
+  </div>
+</div>
+
+
+
+
+
+<div id="page9" data-role="page">
+  <div role="main">
+  	<div is="header" data-role="header">
+    	<img class="logo" src="image/logo.png" alt="">
+  	</div>
+  	<div class="ui-content">
+  		<div class="user-block">
+			<img src="image/user-check.png" is="image">
+		</div>
+		<h3>購買成功！</h3>
+		<a is="button" class="bg-orange mt25 f18 ui-btn" href="#page1" data-transition="slide">返回</a>
+  	</div>
+  </div>
+</div>
+
+
 
 
 
@@ -198,43 +415,28 @@
 <script src="jquery.mobile-1.4.5.js"></script>
 <script>
 	window.onload = function() {
-
+		
 	}
 
-	// $('#conform').click(function(){
-
-	// 	var usercount = document.getElementById("userCount").value;
-	// 	var userbirth= document.getElementById("userBirth").value;
-	// 	var userid = document.getElementById("userId").value;
-	// 	var userphone = document.getElementById("userPhone").value;
-	// 	var useremail = document.getElementById("userEmail").value;
-
-
-	// 	document.getElementById("info-user-count").innerHTML = usercount;
-	// 	document.getElementById("info-user-birth").innerHTML = userbirth;
-	// 	document.getElementById("info-user-id").innerHTML = userid;
-	// 	document.getElementById("info-user-phone").innerHTML = userphone;
-	// 	document.getElementById("info-user-email").innerHTML = useremail;
-
-
-	// 	setTimeout("javascript:location.href='file:///C:/Users/Taipay36/Desktop/taipay-mobile-demo/index.html#page4'", 4000); 
-
-	// });
-
+	var currentUrl = document.URL;
+	
 	function loginComform(){
 		
+
 		var count = document.getElementById("loginCount").value;
 		var password = document.getElementById('loginPassword').value;
 		if(count === "" || password === "") {
 			alert("請輸入帳號密碼");
 		}
 		else {
-			javascript:location.href = 'https://timmy951159.github.io/taipay-demo.github.io/#page5';
+			console.log(currentUrl);
+			javascript:location.href = currentUrl + '#page5';
 		}
 
 	}
 
 	function signUpConform() {
+
 		var usercount = document.getElementById("userCount").value;
 		var userpassword = document.getElementById("userPassword").value;
 		var userbirth= document.getElementById("userBirth").value;
@@ -246,17 +448,24 @@
 			alert("請輸入完整資料");
 		}
 		else {
-
+		console.log(currentUrl);
 		document.getElementById("info-user-count").innerHTML = usercount;
 		document.getElementById("info-user-birth").innerHTML = userbirth;
 		document.getElementById("info-user-id").innerHTML = userid;
 		document.getElementById("info-user-phone").innerHTML = userphone;
 		document.getElementById("info-user-email").innerHTML = useremail;
-			javascript:location.href = 'https://timmy951159.github.io/taipay-demo.github.io/#page3';
-			setTimeout("javascript:location.href='https://timmy951159.github.io/taipay-demo.github.io/#page4'", 4000); 
+			javascript:location.href = currentUrl + '#page3';
+			setTimeout( 'javascript:location.href = currentUrl + "#page4"', 5000); 
 		}
 
 	}
+
+
+	function allconform() {
+		javascript:location.href = currentUrl + '#page3';
+			setTimeout( 'javascript:location.href = currentUrl + "#page9"', 5000); 
+	}
+
 
 
 </script>
