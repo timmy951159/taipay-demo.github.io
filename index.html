@@ -211,42 +211,42 @@
   	</div>
   	<ul class="product-list">
   		<li>
-  			<a href="#page7" data-transition="slide">
+  			<a href="javascript:void(0);" onclick="getImg(this)" data-transition="slide">
 	  			<img src="image/product1.png" alt="">
 	  			<span class="product-price">$99.00</span>
 	  			<span class="buyit-icon"><i class="fas fa-shopping-cart text-black"></i></span>
   			</a>
   		</li>
   		<li>
-  			<a href="#page7" data-transition="slide">
+  			<a href="javascript:void(0);" onclick="getImg(this)" data-transition="slide">
 	  			<img src="image/product2.png" alt="">
 	  			<span class="product-price">$99.00</span>
 	  			<span class="buyit-icon"><i class="fas fa-shopping-cart text-black"></i></span>
   			</a>
   		</li>
   		<li>
-  			<a href="#page7" data-transition="slide">
+  			<a href="javascript:void(0);" onclick="getImg(this)" data-transition="slide">
 	  			<img src="image/product3.png" alt="">
 	  			<span class="product-price">$99.00</span>
 	  			<span class="buyit-icon"><i class="fas fa-shopping-cart text-black"></i></span>
   			</a>
   		</li>
   		<li>
-  			<a href="#page7" data-transition="slide">
+  			<a href="javascript:void(0);" onclick="getImg(this)" data-transition="slide">
 	  			<img src="image/product4.png" alt="">
 	  			<span class="product-price">$99.00</span>
 	  			<span class="buyit-icon"><i class="fas fa-shopping-cart text-black"></i></span>
   			</a>
   		</li>
   		<li>
-  			<a href="#page7" data-transition="slide">
+  			<a href="javascript:void(0);" onclick="getImg(this)" data-transition="slide">
 	  			<img src="image/product5.png" alt="">
 	  			<span class="product-price">$99.00</span>
 	  			<span class="buyit-icon"><i class="fas fa-shopping-cart text-black"></i></span>
   			</a>
   		</li>
   		<li>
-  			<a href="#page7" data-transition="slide">
+  			<a href="javascript:void(0);" onclick="getImg(this)" data-transition="slide">
 	  			<img src="image/product6.png" alt="">
 	  			<span class="product-price">$99.00</span>
 	  			<span class="buyit-icon"><i class="fas fa-shopping-cart text-black"></i></span>
@@ -264,7 +264,7 @@
   	</div>
   	<div class="ui-content">
   		<div class="user-block">
-			<img src="image/product2.png" is="image">
+			<img id="conformProductImg" src="image/product2.png" is="image">
 			<h2 class="product-price">$99.00</h2>
 		</div>
 		<div is="grid" class="ui-grid-a" style="height:95px">
@@ -272,7 +272,7 @@
 	      	<a is="button" class="ui-btn ml0 bg-dark-gray text-white f18" href="#" data-rel="back" data-transition="slide">取消</a>
 	      </div>
 	      <div is="block" class="ui-block-b" style="height:100%">
-	      	<a id="conform" is="button" class="ui-btn mr0 bg-orange f18" href="#page8">確定下單</a>
+	      	<a id="conform" is="button" class="ui-btn mr0 bg-orange f18" href="#page8" data-transition="slide">確定下單</a>
 	      </div>
 	    </div>
 		
@@ -297,33 +297,39 @@
   	<div class="ui-content">
   		
   		<p class="f18">信用卡卡號：</p>
-		<div is="grid" class="ui-grid-c	credit-num-input" style="height:60px">
-	      <div is="block" class="ui-block-a" style="height:100%">
+		<div is="grid" class="ui-grid-c credit-num-input" style="height:60px">
+	      <div is="block" class="ui-block-a cdc" style="height:100%">
 	        <div is="fieldcontain" class="ui-field-contain">
 	          <label for="gk-1018YLCC"></label>
-	          <input class="tc" is="text-input" type="password" name id="gk-1018YLCC" maxlength="4">
+	          <input class="tc cdi" is="text-input" type="password" name='t1' id="gk-1018YLCC" maxlength="4" onKeyup="next(this,'t2')">
 	        </div>
 	      </div>
-	      <div is="block" class="ui-block-b" style="height:100%">
+	      <div is="block" class="ui-block-b cdc" style="height:100%">
 	        <div is="fieldcontain" class="ui-field-contain">
 	          <label for="gk-1018We0J"></label>
-	          <input class="tc" is="text-input" type="password" name id="gk-1018We0J" maxlength="4">
+	          <input class="tc cdi"  is="text-input" type="password" name='t2' id="gk-1018We0J" maxlength="4" onKeyup="next(this,'t3')">
 	        </div>
 	      </div>
-	      <div is="block" class="ui-block-c" style="height:100%">
+	      <div is="block" class="ui-block-c cdc " style="height:100%">
 	        <div is="fieldcontain" class="ui-field-contain">
 	          <label for="gk-1018Jyak"></label>
-	          <input class="tc" is="text-input" type="password" name id="gk-1018Jyak" maxlength="4">
+	          <input class="tc cdi" is="text-input" type="password" name='t3' id="gk-1018Jyak" maxlength="4" onKeyup="next(this,'t4')">
 	        </div>
 	      </div>
-	      <div is="block" class="ui-block-d" style="height:100%">
+	      <div is="block" class="ui-block-d cdc" style="height:100%">
 	        <div is="fieldcontain" class="ui-field-contain">
 	          <label for="gk-1018I7Xw"></label>
-	          <input class="tc" is="text-input" type="password" name id="gk-1018I7Xw" maxlength="4">
+	          <input class="tc cdi" is="text-input" type="password" name='t4' id="gk-1018I7Xw" maxlength="4">
 	        </div>
 	      </div>
 	    </div>
-	
+
+
+
+
+
+
+
 		<div class="card-kind mb50">
 			<ul>
 				<li style="line-height: 28px;">
@@ -385,8 +391,6 @@
   	</div>
   </div>
 </div>
-
-
 
 
 
@@ -496,9 +500,9 @@
 		var creditNumAll = creditNum1 + '-' + creditNum2 + '-' + creditNum3 + '-' + creditNum4 ;
 
 		creditNumAll = creditNumAll.replace(function(){
-			var creditNumAlltoStar = creditNumAll.substring(0,4);
+			var creditNumAlltoStar = creditNumAll.substring(0,15);
 			return creditNumAlltoStar;
-		}(),'****');
+		}(),'****-****-****-');
 
 		document.getElementById("info-user-credit").innerHTML = creditNumAll;
 
@@ -507,6 +511,23 @@
 		javascript:location.href = currentUrl + '#page3';
 		setTimeout( 'javascript:location.href = currentUrl + "#page9"', 5000); 
 	}
+
+	function getImg(e){
+		var imgUrl = e.children[0].src;
+		document.getElementById("conformProductImg").src=imgUrl;
+		javascript:location.href = currentUrl + '#page7';
+		
+	}
+
+	function next(obj,next) {  
+		 
+	    if (obj.value.length == obj.maxLength) {  
+
+	    	var aa = $(obj).parents('.cdc');
+	    	aa.next().children().children().children().focus();
+ 
+	}  
+}
 
 
 </script>
