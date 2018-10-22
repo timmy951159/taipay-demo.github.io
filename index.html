@@ -186,7 +186,7 @@
 			</div>
 			<div class="column text-black">
 				<i class="fas fa-credit-card"></i>
-				<span>信用卡卡號：</span>
+				<span>信用卡描述：</span>
 				<span id="info-user-credit"></span>
 			</div>
 		</div>
@@ -345,7 +345,7 @@
 		</div>
 
 		<p class="f18">有效年月：</p>
-		<div class="effect-date mb50">
+		<div class="effect-date">
 			<form>
 				<div class="ui-field-contain">
 				    <select name="select-native-1" id="select-native-1">
@@ -377,6 +377,13 @@
 				</div>
 			</form>
 			<div style="clear: both;"></div>
+		</div>
+
+
+		<p class="f18">信用卡描述：</p>
+		<div class="mb50">
+			<label for="desc"></label>
+	          <input class="tc" is="text-input" type="text" name id="credit-desc" maxlength="20">
 		</div>
 		
 		<div is="grid" class="ui-grid-a" style="height:95px">
@@ -503,13 +510,16 @@
 		var creditNum3 = document.getElementById('gk-1018Jyak').value;
 		var creditNum4 = document.getElementById('gk-1018I7Xw').value;
 		var creditNumAll = creditNum1 + '-' + creditNum2 + '-' + creditNum3 + '-' + creditNum4 ;
+		var creditDesc = document.getElementById('credit-desc').value;
 
 		creditNumAll = creditNumAll.replace(function(){
 			var creditNumAlltoStar = creditNumAll.substring(0,15);
 			return creditNumAlltoStar;
 		}(),'****-****-****-');
 
-		document.getElementById("info-user-credit").innerHTML = creditNumAll;
+		
+
+		document.getElementById("info-user-credit").innerHTML = creditDesc;
 
 		console.log(creditNumAll);
 
